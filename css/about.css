@@ -199,3 +199,175 @@ body {
   text-decoration: underline;
   padding:5px;
 }
+/* ===== Responsive Design ===== */
+
+/* ===== Mobile Responsive (<768px) ===== */
+@media (max-width: 768px) {
+  /* Navbar */
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background: #111;
+    flex-direction: column;
+    align-items: center;
+    transition: height 0.3s ease;
+    z-index: 999;
+    padding: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    margin: 9px 0;
+  }
+
+  .nav-links.open {
+    height: 200px;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .burger.toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .burger.toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  .burger.toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* About Page Images */
+  .about-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* About Titles */
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-subtitle {
+    font-size: 1rem;
+  }
+
+  /* About Details Container */
+  .about-details {
+    padding: 20px 10px;
+    max-width: 100%;
+  }
+
+  /* About Sections */
+  .about-section {
+    padding: 15px;
+  }
+
+  /* Nested Cards */
+  .nested-card {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .nested-card img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    margin: auto;
+  }
+
+  .nested-card.reverse {
+    flex-direction: column;
+  }
+
+  .nested-text h3 {
+    font-size: 1rem;
+  }
+
+  /* Back Button */
+  .back-btn {
+    font-size: 0.9rem;
+    margin: 20px 0;
+  }
+}
+
+/* ===== Medium Screen Responsive (850px–1000px) ===== */
+@media (min-width: 850px) and (max-width: 1000px) {
+  /* Navbar adjustments */
+  .nav-links {
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    font-size: 1.05rem;
+  }
+
+  /* Burger menu - keep hidden */
+  .burger {
+    display: none;
+  }
+
+  /* About Page Images */
+  .about-image img {
+    width: 220px;
+    height: 220px;
+  }
+
+  /* About Titles */
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.1rem;
+  }
+
+  /* About Details Container */
+  .about-details {
+    padding: 30px 15px;
+    max-width: 800px;
+  }
+
+  /* About Sections */
+  .about-section {
+    padding: 20px;
+  }
+
+  /* Nested Cards */
+  .nested-card {
+    flex-direction: column;
+    gap: 15px;
+    padding: 12px;
+  }
+
+  .nested-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: auto;
+  }
+
+  .nested-card.reverse {
+    flex-direction: column;
+  }
+
+  .nested-text h3 {
+    font-size: 1.1rem;
+  }
+
+  /* Back Button */
+  .back-btn {
+    font-size: 0.95rem;
+    margin: 30px 0;
+  }
+}
+
+
